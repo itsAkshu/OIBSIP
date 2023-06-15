@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <title>Temperature Converter</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <div class="date-time">
+                    <span id="current-time"></span>
+                </div>
+                <div class="icons">
+                    <span class="material-symbols-outlined">
+                        signal_cellular_alt
+                    </span>
+                    <span class="material-symbols-outlined">
+                        wifi
+                    </span>
+                    <span class="material-symbols-outlined">
+                        battery_full
+                    </span>
+                </div>
+            </div>
+            <div class="heading">
+                <h1>Temperature converter</h1>
+            </div>
+            <div class="form-submit">
+                <form id="calcTemp" onsubmit="calculateTemp(); return false">
+                    <label for="temp">Degrees</label>
+                    <br>
+                    <input type="number" name="temp" id="temp" value="0">
+                    <select name="temp_diff" id="temp_diff">
+                        <option value="fah">&#176;Fahrenheit</option>
+                        <option value="cel">&#176;Celsius</option>
+                    </select>
+                    <br>
+                    <input type="submit" name="submit" id="submit">
+                    <br>
+                    <span id="result"></span>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
